@@ -1,0 +1,96 @@
+:root {
+  --bg: #0b1220;
+  --surface: #121a2b;
+  --text: #e8eef9;
+  --muted: #9aa8c7;
+  --link: #5eb0ff;
+  --accent: #208aef;
+  --border: #243049;
+  --max: 44rem;
+  --radius: 12px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { color-scheme: dark; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+header.site {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+.brand:hover { text-decoration: none; color: var(--accent); }
+
+nav { display: flex; flex-wrap: wrap; gap: 0.85rem 1.1rem; font-size: 0.95rem; }
+
+h1 { font-size: 1.85rem; line-height: 1.25; margin: 0 0 0.75rem; }
+h2 { font-size: 1.2rem; margin: 1.75rem 0 0.6rem; }
+p, li { color: var(--muted); }
+p strong, li strong { color: var(--text); }
+ul { padding-left: 1.2rem; }
+li { margin: 0.35rem 0; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.35rem;
+  margin: 1.25rem 0;
+}
+
+.lede { font-size: 1.05rem; color: var(--muted); margin-top: 0; }
+
+.meta { font-size: 0.9rem; color: var(--muted); margin-top: 2rem; }
+footer.site {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.btn:hover { text-decoration: none; filter: brightness(1.08); }
+.btn.secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
